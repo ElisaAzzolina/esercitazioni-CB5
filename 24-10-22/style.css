@@ -1,0 +1,38 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .wrapper {
+    text-align: center;
+    color: white;
+    font-size: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 40px;
+    border: none;
+    border-radius: 40px;
+    background: rgb(238,174,202);
+    background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+    box-shadow: 0 0 4px rgb(189, 189, 189);;
+  }
+
+  .wrapper button {
+    padding: 20px;
+    border: none;
+    border-radius: 20px;
+    background-color: white;
+    box-shadow: 0 0 4px rgb(189, 189, 189);
+    transition: all 0.35s;
+    font-family: 'Poppins', sans-serif;
+  }
+
+  .wrapper button:hover {
+    padding: 30px;
+    border-radius: 40px;
+  }
