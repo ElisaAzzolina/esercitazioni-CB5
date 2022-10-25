@@ -4,50 +4,57 @@ let secondNum = prompt("Inserisci il secondo numero:");
 
 // ---------- CON IF/ELSE IF ----------
 
-/* if (operation === "Addizione" || operation === "addizione" || operation === "ADDIZIONE") {
-    alert(`La somma di ${firstNum} più ${secondNum} è ${parseInt(firstNum) + parseInt(secondNum)}`);
-    console.log(parseInt(firstNum) + parseInt(secondNum));
-} 
-else if (operation === "Sottrazione" || operation === "sottrazione" || operation === "SOTTRAZIONE") {
+if (operation.toLowerCase() === "addizione") {
+     console.log(parseInt(firstNum) + parseInt(secondNum));   
+     alert(`La somma di ${firstNum} più ${secondNum} è ${parseInt(firstNum) + parseInt(secondNum)}`);
+
+}
+else if (operation.toLowerCase() === "sottrazione") {
+    console.log(parseInt(firstNum) - parseInt(secondNum));    
     alert(`La differenza tra ${firstNum} e ${secondNum} è ${parseInt(firstNum) - parseInt(secondNum)}`);
-    console.log(parseInt(firstNum) - parseInt(secondNum));
+
 } 
-else if (operation === "Moltiplicazione" || operation === "moltiplicazione" || operation === "MOLTIPLICAZIONE") {
+else if (operation.toLowerCase() === "moltiplicazione") {
+    console.log(parseInt(firstNum) * parseInt(secondNum));    
     alert (`Il prodotto di ${firstNum} per ${secondNum} è ${parseInt(firstNum) * parseInt(secondNum)}`);
-    console.log(parseInt(firstNum) * parseInt(secondNum));
+
 } 
-else if (operation === "Divisione" || operation === "divisione" || operation === "DIVISIONE") {
+else if (operation.toLowerCase() === "divisione") {
     //se il resto della divisione tra il primo numero e il secondo è 0 allora l'alert comunica "quoto", altrimenti "quoziente"
+    console.log(parseInt(firstNum) / parseInt(secondNum));    
     firstNum % secondNum == 0 ? alert(`il quoto di ${firstNum} diviso ${secondNum} è ${parseInt(firstNum) / parseInt(secondNum)}`) : alert(`il quoziente di ${firstNum} diviso ${secondNum} è ${parseInt(firstNum) / parseInt(secondNum)}`); 
-    console.log(parseInt(firstNum) / parseInt(secondNum));
+
 } 
 else {
+    console.log("operazione non valida");    
     alert(`Hai sbagliato qualcosa! Inserisci un'operazione matematica valida!`);
-    console.log("operazione non valida");
+
 }
- */
+
 
 
 // ---------- CON SWITCH ----------
 
-switch (operation) {
+/* switch (operation.toLowerCase()) {
     case "addizione":
+        console.log(parseInt(firstNum) + parseInt(secondNum));        
         alert(`La somma di ${firstNum} più ${secondNum} è ${parseInt(firstNum) + parseInt(secondNum)}`);
-        console.log(parseInt(firstNum) + parseInt(secondNum));
         break;
     case "sottrazione":
+        console.log(parseInt(firstNum) - parseInt(secondNum));        
         alert(`La differenza tra ${firstNum} e ${secondNum} è ${parseInt(firstNum) - parseInt(secondNum)}`);
-        console.log(parseInt(firstNum) - parseInt(secondNum));
         break;
     case "moltiplicazione":
+        console.log(parseInt(firstNum) * parseInt(secondNum));        
         alert (`Il prodotto di ${firstNum} per ${secondNum} è ${parseInt(firstNum) * parseInt(secondNum)}`);
-        console.log(parseInt(firstNum) * parseInt(secondNum));
+
         break;
     case "divisione":
+        console.log(parseInt(firstNum) / parseInt(secondNum));        
         firstNum % secondNum == 0 ? alert(`il quoto di ${firstNum} diviso ${secondNum} è ${parseInt(firstNum) / parseInt(secondNum)}`) : alert(`il quoziente di ${firstNum} diviso ${secondNum} è ${parseInt(firstNum) / parseInt(secondNum)}`); 
-        console.log(parseInt(firstNum) / parseInt(secondNum));
         break;
     default:
+        console.log("operazione non valida");        
         alert(`Hai sbagliato qualcosa! Inserisci un'operazione matematica valida!`);
-        console.log("operazione non valida");
-}
+
+} */
