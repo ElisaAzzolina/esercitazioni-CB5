@@ -1,0 +1,156 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+/*---------- NAVBAR ----------*/
+
+nav {
+    width: 100%;
+    position:fixed;
+    background-color: white;
+    box-shadow: 10px 0 10px rgba(49, 49, 49, 0.151);
+}
+
+nav img {
+    width: 100px;
+}
+
+nav ul {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+}
+
+nav li {
+    list-style: none;
+}
+
+nav a {
+    text-decoration: none;
+    color: black;
+}
+
+/*---------- HERO ----------*/
+.hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding:0 3%;
+    background-image: url(img/hero.jpg);
+    background-repeat: no-repeat;
+    background-position-x: 80%;
+    background-size: cover;
+    height: 100vh;
+}
+
+.hero h1 {
+    color: white;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.568); 
+    font-size: 4rem;
+    margin: 0;
+    padding: 0;
+}
+
+.hero h2 {
+    color: white;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.568); 
+    font-size: 2rem;
+    margin:0;
+    padding: 0;
+}
+
+
+/*---------- MOST-POPULAR/DISCOUNT ----------*/
+
+.most-popular {
+    margin: 0 3%;
+    padding: 30px 0;
+    height: 100vh;
+    overflow-y: scroll;
+}
+
+.most-popular, .discount {
+    margin-top: 50px;
+    padding: 0 3%;
+}
+
+.most-popular__h2, .discount__h2 {
+    font-size: 2rem;
+    text-align: center;
+    color: rgb(41, 41, 41);
+}
+
+.discount {
+    padding-top: 50px;
+    background-color: #f8f8f8;
+    padding-bottom: 100px;
+}
+
+
+.most-popular-card-list, .discount-card-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: center;
+    align-items: center;
+}
+
+.discount-card-list .single-cards {
+    background-color: white;
+}
+
+.single-cards {
+    width: 500px;
+    height: 500px;
+    box-shadow: 0px 0px 30px rgba(190, 190, 190, 0.658);
+}
+
+.single-cards h3 {
+    text-align: center;
+    padding: 6px;
+    font-size: 30px;
+    color: #ffcc00;
+    margin: 6px 0 10px 0;
+}
+
+.single-cards img {
+    margin: 0;
+    margin-bottom: -10px;
+    padding: 0;
+}
+
+.single-cards p {
+    background-color: white;
+    margin: 0;
+    padding: 30px 6px 10px 6px;
+}
+
+.single-cards .price {
+    font-weight: bold;
+    font-size: 18px;
+    padding: 6px;
+    color: #cf6c89;
+}
+
+.most-popular-card-list img, .discount-card-list img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.footer {
+    background-color: rgb(41, 41, 41);
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    height: 200px;
+}
+
+.footer__par {
+    margin: auto;
+    text-align: center;
+    color: white;
+}
