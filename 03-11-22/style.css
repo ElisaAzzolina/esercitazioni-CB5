@@ -280,6 +280,10 @@ nav button {
     gap: 20px;
 }
 
+.specialOffers__text h2 {
+    font-size: 30px;
+}
+
 .specialOffer__card {
     display: flex;
     flex-direction: column;
@@ -360,7 +364,8 @@ nav button {
     gap: 30px;
     background-image: url(img/texture.jpg);
     background-repeat: repeat;
-    background-size:contain;
+    background-size: contain;
+    background-attachment: fixed;
 }
 
 .services__card {
