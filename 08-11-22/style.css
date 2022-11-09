@@ -8,6 +8,14 @@ body {
     font-family: 'Poppins', sans-serif;
 }
 
+.loading {
+    display: none;
+}
+
+.active {
+    display: block;
+}
+
 .card {
     width: 250px;
     display: flex;

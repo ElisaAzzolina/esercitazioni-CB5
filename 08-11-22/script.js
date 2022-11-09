@@ -1,5 +1,6 @@
 const bodyEl = document.querySelector("body");
 
+
 const createPokemonCard = (data) => {
     const cardEl = document.createElement("div");
     cardEl.className = "card";
@@ -84,14 +85,9 @@ const createPokemonCard = (data) => {
 fetch("https://pokeapi.co/api/v2/pokemon/?limit=150")
     .then((response) => response.json())
     .then((poke) => {
+        console.log(poke);
         poke.results.forEach((item) => fetch(item.url)
         .then((res) => res.json()
         .then((pokemon) => createPokemonCard(pokemon))))})
     .catch((error) => console.log(`ERRORE: ${error}`))
-    .finally((done) => console.log("----- FATTO -----"));
-
-
-
-        
-
-
+    .finally(() => console.log("----- FATTO -----"));
