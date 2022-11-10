@@ -1,0 +1,130 @@
+:root {
+    --first-color: #202733;
+    --second-color: #313A48;
+    --text-primary-color: #CEE3E9;
+    --text-secondary-color: #53FFAA;
+}
+
+body {
+    background-color: var(--first-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    font-family: 'Manrope', sans-serif;
+}
+
+/*----- CARD -----*/
+
+.card {
+    width: 60vw;
+    height: 40vh;
+    margin: 0 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    background-color: var(--second-color);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 4px 0px 20px rgba(0, 0, 0, 0.534);
+}
+
+.phrase {
+    font-size: 28px;
+    color: var(--text-primary-color);
+    letter-spacing: -0.3px;
+    text-align: center;
+    line-height: 40px;
+}
+
+.idNum {
+    text-transform: uppercase;
+    color: var(--text-secondary-color);
+    letter-spacing: 4.09px;
+}
+
+.animated_background {
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite; 
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/*----- BOTTONE -----*/
+
+.btn_generator {
+    padding: 20px;
+    border-radius: 100%;
+    text-align: center;
+    margin-top: -40px;
+    border: none;
+    background-color: var(--text-secondary-color);
+    box-shadow: 0px 0px 30px 1px var(--first-color);
+    transition: all 0.35s;
+}
+
+.btn_generator:hover {
+    padding: 30px;
+    background-color: rgb(122, 206, 240);
+}
+
+
+/*----- LOADER -----*/
+
+.active {
+    width: 60vw;
+    height: 40vh;
+    margin: 0 10px;
+}
+
+.active h2 {
+    display: none;
+}
+
+.active p {
+    display: none;
+}
+
+.active img {
+    display: none;
+}
+
+.active:after  {
+    content: " ";
+    display: block;
+    border-radius: 50%;
+    width: 0;
+    height: 0;
+    margin: 8px;
+    box-sizing: border-box;
+    border: 32px solid #fff;
+    border-color: #fff transparent #fff transparent;
+    animation: active 1.2s infinite;
+  }
+  @keyframes active {
+    0% {
+      transform: rotate(0);
+      animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+    }
+    50% {
+      transform: rotate(900deg);
+      animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    }
+    100% {
+      transform: rotate(1800deg);
+    }
+  }
+  
