@@ -13,9 +13,11 @@ const qs = (el) => document.querySelector(el);
  * @param {string} url
  * @returns data
  */
-const GET = async url => {
+const GET = async (loader, url) => {
+    loader.classList.toggle("active");
     const res = await fetch(url);
     const data = await res.json();
+    loader.classList.toggle("active");
     return await data;
 }
 

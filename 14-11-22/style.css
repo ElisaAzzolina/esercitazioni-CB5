@@ -15,8 +15,21 @@ body {
     flex-direction: column;
     align-content: center;
     justify-content: center;
-    background: var(--primary-color)
-    
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
 .main {
@@ -24,9 +37,17 @@ body {
     flex-direction: column;
     align-content: center;
     justify-content: center;
-    margin: 0 5%;
+    margin: 0 10%;
     background-color: var(--secondary-color);
     padding: 20px;
+    box-shadow: 0px 0px 50px 10px rgba(51, 51, 51, 0.555);
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
 }
 
 .main h1 {
@@ -35,14 +56,32 @@ body {
     color: var(--primary-color);
 }
 
-.card .card_info {
+#card .card_info {
+    position: relative;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: space-between;
+    gap: 40px;
+}
+
+#card .card_info h2, #card .card_info p {
+    margin: 0;
+}
+
+#card .card_info p {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 10px;
+    border-radius: 6px;
+}
+
+.card_body {
+    background-color: white;
+    padding: 10px;
+    border-radius: 10px;
 }
 
 .buttons {
-    margin: 0 5%;
     margin-top: 10px;
     display: flex;
     align-items: center;
@@ -54,7 +93,7 @@ body {
     font-family: 'Poppins', sans-serif;
     text-transform: uppercase;
     background-color: var(--btn-color-one);
-    border: 2px solid var(--btn-color-two);
+    border: 2px solid var(--primary-color);
     transition: all 0.35s;
 }
 
@@ -62,4 +101,55 @@ body {
     background-color: var(--btn-color-two);
     border-radius: 4px;
     font-weight: bold;
+}
+
+/*----- LOADER -----*/
+.active {
+    top: 100px;
+    height:40px;
+    margin: 0;
+}
+
+.active h2 {
+    display: none;
+}
+
+.active p {
+    display: none;
+}
+
+.active img {
+    display: none;
+}
+
+.active:after  {
+    content: " ";
+    display: block;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    margin: 8px;
+    box-sizing: border-box;
+    border: 32px solid rgb(0, 0, 0);
+    border-color: rgb(0, 0, 0) transparent #fff transparent;
+    animation: active 1.2s infinite;
+  }
+  @keyframes active {
+    0% {
+      transform: rotate(0);
+      animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+    }
+    50% {
+      transform: rotate(900deg);
+      animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    }
+    100% {
+      transform: rotate(1800deg);
+    }
+  }
+
+@media screen and (min-width: 767px) {
+    .main {
+        margin: 0 30%;
+    }
 }

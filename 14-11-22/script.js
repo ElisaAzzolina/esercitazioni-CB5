@@ -1,6 +1,7 @@
  import {qs, GET} from "./utils.js";
 
 /*----- DOM el -----*/
+const cardEl = document.getElementById("card");
 const titleEL = qs(".card_title");
 const idEl = qs(".card_id");
 const bodyEl = qs(".card_body");
@@ -43,7 +44,7 @@ const getPosts = (inst) => {
             index = inst;
     }
 
-    GET(`${url}/${index}`)
+    GET(cardEl,`${url}/${index}`)
         .then(res => {
             titleEL.textContent = res?.title;
             idEl.textContent = `#${res?.id}`;
@@ -60,7 +61,6 @@ const getPosts = (inst) => {
             } else {
                 btnNextEl.disabled = false;
             }
-
         });
 }
 
