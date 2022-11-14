@@ -1,0 +1,65 @@
+:root {
+    --primary-color: #272343;
+    --secondary-color: #ffe9e3;
+    --btn-color-one: #e3f6f5;
+    --btn-color-two: #bae8e8;
+}
+
+body {
+    margin: 0;
+    padding:0;
+    font-family: 'Poppins', sans-serif;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    background: var(--primary-color)
+    
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    margin: 0 5%;
+    background-color: var(--secondary-color);
+    padding: 20px;
+}
+
+.main h1 {
+    font-size: 40px;
+    margin:0 0 10px 0;
+    color: var(--primary-color);
+}
+
+.card .card_info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.buttons {
+    margin: 0 5%;
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.btn_prev, .btn_next {
+    padding: 15px;
+    font-family: 'Poppins', sans-serif;
+    text-transform: uppercase;
+    background-color: var(--btn-color-one);
+    border: 2px solid var(--btn-color-two);
+    transition: all 0.35s;
+}
+
+.btn_prev:hover, .btn_next:hover {
+    background-color: var(--btn-color-two);
+    border-radius: 4px;
+    font-weight: bold;
+}
