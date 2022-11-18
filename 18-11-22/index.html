@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pokemon</title>
+    <link rel="stylesheet" href="./css/style.css">
+  </head>
+  <body>
+    <header>
+      <img src="./img/pokemon-logo.png" alt="pokemonLogo" class="header_img">
+      <h1>Crea il tuo Pokédex!</h1>
+
+      <section class="forms">
+
+        <div class="form_add">
+          <h2>Inserisci i Tuoi Pokémon!</h2>
+          <form name="pokemon">
+            <input type="text" name="pokemon_name" placeholder="Nome Pokemon" autocomplete="off"/>
+            <input type="text" name="pokemon_type" placeholder="Tipo Pokemon" autocomplete="off"/>
+            
+            <div class="forms_pokeball">
+              <img src="./img/pokeball.gif" alt="pokeball" class="pokeball">
+              <input type="submit" value="Aggiungi"/>
+              <img src="./img/pokeball.gif" alt="pokeball" class="pokeball">
+            </div>
+          </form>
+        </div>
+
+        <div class="form_patch" id="edit">
+          <h2>Modifica i tuoi Pokémon!</h2>
+          <form name="pkmPatch">
+
+            <div class="name_type">
+              <input type="text" name="patch_name" placeholder="Nome Pokemon" autocomplete="off"/>
+              <input type="text" name="patch_type" placeholder="Tipo Pokemon" autocomplete="off"/>
+            </div>
+            
+            <input type="text" name="patch_id" placeholder="ID Pokemon" autocomplete="off"/>
+            
+            <div class="forms_pokeball">
+              <img src="./img/pokeball.gif" alt="pokeball" class="pokeball">
+              <input type="submit" value="Modifica"/>
+              <img src="./img/pokeball.gif" alt="pokeball" class="pokeball">
+          </div>
+          </form>
+        </div>
+
+      </section>
+  </header>
+
+  <h2>Ecco i tuoi pokemon!</h2>
+  <div class="card_container"></div>
+
+  <footer>
+    <p>Made with ❤️ By Elisa </p>
+  </footer>
+
+    <script type="module" src="./js/main.js"></script>
+    <script type="module" src="./js/utils.js"></script>
+  </body>
+</html>
