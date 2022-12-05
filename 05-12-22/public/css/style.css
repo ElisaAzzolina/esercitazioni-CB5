@@ -169,6 +169,13 @@ html {
   font-weight: bold;
 }
 
+.actor_img,
+.regista_img {
+  width: 300px;
+  height: 400px;
+  object-fit: cover;
+}
+
 footer {
   height: 20vh;
   display: flex;

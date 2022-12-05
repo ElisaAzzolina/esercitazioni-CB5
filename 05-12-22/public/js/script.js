@@ -13,12 +13,10 @@ const formRegisti = document.forms.nuovi_registi;
 const elementRegisti = formRegisti.elements;
 
 const imageCreation = async (name, surname) => {
-  console.log("entro nella funzione");
   let imgc;
   const urlImg = `https://api.qwant.com/v3/search/images?count=1&q=${name}+${surname}&t=images&safesearch=1&locale=it_IT&offset=0&device=desktop`;
   await GET(urlImg).then((res) => {
-    imgc = res.data.result.items[0].media_fullsize;
-    console.log(imgc);
+    imgc = res.data.result.items[0].media_preview;
   });
   return imgc;
 };
@@ -26,12 +24,12 @@ const imageCreation = async (name, surname) => {
 //creazione della card attore
 const createCardAttore = async (data) => {
   const imagesC = await imageCreation(data.nome, data.cognome);
-  console.log(imagesC);
+
   const cardEl = ce("div");
   cardEl.classList.add("card_attore");
 
   const imgEl = ce("img");
-  imgEl.className = "actor_placeholderimg";
+  imgEl.className = "actor_img";
   imgEl.setAttribute("src", `${imagesC}`);
   imgEl.setAttribute("alt", "imgGallery");
 
@@ -72,13 +70,14 @@ const createCardAttore = async (data) => {
 };
 
 //creazione della card regista
-const createCardRegista = (data) => {
+const createCardRegista = async (data) => {
+  const imagesC = await imageCreation(data.nome, data.cognome);
   const cardEl = ce("div");
   cardEl.classList.add("card_regista");
 
   const imgEl = ce("img");
-  imgEl.className = "regista_placeholderimg";
-  imgEl.setAttribute("src", `https://picsum.photos/300/400?${data.id}`);
+  imgEl.className = "regista_img";
+  imgEl.setAttribute("src", `${imagesC}`);
   imgEl.setAttribute("alt", "imgGallery");
 
   const nameEl = ce("h3");
@@ -153,18 +152,19 @@ formRegisti.addEventListener("submit", (e) => {
     });
 });
 
-/* const func = async () => {
-  const res = await fetch(url);
-  const resToJson = res.json(res);
-  createCardAttore(resToJson);
-}; */
-
 window.onload = async () => {
-  const res = await fetch(url);
-  const resToJson = res.json(res);
-  createCardAttore(resToJson);
-};
+  // Fetch Attori
+  const attori = await fetch(urlAttori);
+  const attoriToJson = await attori.json();
+  console.log(attoriToJson);
+  attoriToJson.forEach(async (attore) => {
+    await createCardAttore(attore);
+  });
 
-window.onload = GET(urlRegisti).then((res) =>
-  res.map((regista) => createCardRegista(regista))
-);
+  //Fetch Registi
+  const registi = await fetch(urlRegisti);
+  const registiToJson = await registi.json();
+  registiToJson.forEach(async (regista) => {
+    await createCardRegista(regista);
+  });
+};
