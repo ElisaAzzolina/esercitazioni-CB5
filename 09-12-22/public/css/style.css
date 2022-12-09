@@ -1,0 +1,234 @@
+body,
+html {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+.hero {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 50px;
+  background-color: rgb(19, 17, 29);
+  background-image: url(./../img/hero1.jpg);
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: cover;
+  min-height: 50vh;
+  padding: 30px 0;
+  width: 100%;
+  margin: 0;
+}
+
+.hero .text {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  color: white;
+}
+
+.text h1,
+.text h2 {
+  margin: 0;
+}
+
+.text h1 {
+  font-size: 40px;
+  text-transform: uppercase;
+}
+
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.buttons button {
+  padding: 15px;
+  font-family: "Poppins", sans-serif;
+  text-transform: uppercase;
+  border: none;
+  cursor: pointer;
+  transition: all 0.35s;
+}
+
+.buttons .btn1 {
+  background-color: aliceblue;
+}
+
+.buttons .btn1:hover {
+  background-color: rgb(31, 77, 117);
+  color: white;
+  font-weight: bold;
+}
+
+.buttons .btn2 {
+  background-color: rgb(31, 77, 117);
+  color: white;
+}
+
+.buttons .btn2:hover {
+  background-color: aliceblue;
+  color: rgb(39, 39, 39);
+  font-weight: bold;
+}
+
+.hero .hero_gallery {
+  display: none;
+}
+
+/*----- GALLERY -----*/
+.gallery_attori,
+.gallery_registi {
+  background-color: #040612;
+  padding: 150px 0 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+}
+
+.form_attori h2,
+.card_container_registi h2,
+.form_registi h2 {
+  margin: 0 3%;
+  color: white;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+.form_attori h3,
+.form_registi h3 {
+  margin: 0 3% 20px 0;
+  color: white;
+  text-align: left;
+  font-size: 20px;
+}
+
+.card_container_attori,
+.card_container_registi {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 30px;
+  margin: 0 3%;
+}
+
+.card_attore,
+.card_regista {
+  color: white;
+  transition: all 0.35s;
+}
+
+.card_attore:hover,
+.card_regista:hover {
+  color: #040612;
+  background-color: white;
+}
+
+.card_attore h3,
+.card_attore p,
+.card_regista h3,
+.card_regista p {
+  padding: 10px 10px 0px 10px;
+  font-size: 20px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.card_attore .btn_card,
+.card_regista .btn_card {
+  padding: 10px;
+}
+
+.card_attore .container_general,
+.card_regista .container_general {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 10px 10px 20px 10px;
+}
+
+.card_attore .container_general .btn_card,
+.card_regista .container_general .btn_card {
+  width: fit-content;
+  height: fit-content;
+  font-family: "Poppins", sans-serif;
+  background-color: rgb(31, 77, 117);
+  color: white;
+  border: none;
+  transition: all 0.35s;
+}
+
+.card_attore .container_general .btn_card:hover,
+.card_regista .container_general .btn_card:hover {
+  background-color: rgb(77, 0, 0);
+  font-weight: bold;
+}
+
+.actor_img,
+.regista_img {
+  width: 300px;
+  height: 400px;
+  object-fit: cover;
+}
+
+footer {
+  height: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*----- FORM -----*/
+
+.form_attori h2,
+.form_registi h2 {
+  margin-bottom: 30px;
+}
+
+.form_attori form,
+.form_registi form {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 15px;
+}
+
+.form_attori form input,
+.form_registi form input {
+  padding: 15px;
+  font-family: "Poppins", sans-serif;
+}
+
+.form_attori form .form_btn,
+.form_registi form .form_regista_btn {
+  background-color: rgb(31, 77, 117);
+  color: white;
+  transition: all 0.35s;
+}
+
+.form_attori form .form_btn:hover,
+.form_registi form .form_regista_btn:hover {
+  background-color: aliceblue;
+  color: rgb(39, 39, 39);
+  font-weight: bold;
+}
+
+/*----- MEDIA QUERIES -----*/
+@media screen and (min-width: 767px) {
+}
+
+@media screen and (min-width: 1000px) {
+  .hero .hero_gallery {
+    display: block;
+  }
+
+  .hero .hero_gallery img:hover {
+    opacity: 0.5;
+  }
+}
