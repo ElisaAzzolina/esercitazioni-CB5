@@ -1,0 +1,53 @@
+li {
+  cursor: pointer;
+  list-style: none;
+  text-align: left;
+  display: flex;
+  justify-content: space-between;
+}
+
+.box {
+  background: none;
+  border: none;
+  margin-right: 5px;
+  font-size: 18px;
+  cursor: pointer;
+  font-weight: 400;
+  color: rgb(39, 39, 39);
+}
+
+.checked {
+  margin-right: 5px;
+  margin-right: 5px;
+  font-size: 18px;
+  font-weight: 600;
+  background: none;
+  border: none;
+  text-decoration: line-through;
+  cursor: pointer;
+  opacity: 0.3;
+}
+
+button {
+  font-family: "Poppins", sans-serif;
+}
+
+.btn-checked {
+  margin-right: 5px;
+  margin-right: 5px;
+  font-size: 18px;
+  font-weight: 600;
+  background: rgb(162, 196, 162);
+  border: none;
+  cursor: pointer;
+  color: rgb(255, 255, 255);
+}
+
+.btn-box {
+  background: rgb(218, 126, 66);
+  border: none;
+  margin-right: 5px;
+  font-size: 18px;
+  cursor: pointer;
+  color: rgb(255, 255, 255);
+}
