@@ -1,0 +1,13 @@
+body {
+  background-image: url("../public/cool-background.png");
+  margin: 0;
+  padding: 0;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 50px;
+}

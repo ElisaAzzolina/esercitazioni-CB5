@@ -1,0 +1,86 @@
+.lottery_Wrapper {
+  font-family: "JetBrains Mono", monospace;
+  background-color: white;
+  padding: 40px;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 100px;
+  border-radius: 6px;
+  box-shadow: rgba(0, 119, 255, 0.4) 0px 0px 0px 2px,
+    rgba(43, 100, 165, 0.65) 0px 4px 6px -1px,
+    rgba(85, 115, 199, 0.08) 0px 1px 0px inset;
+}
+
+.lottery_Title {
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.lottery_par {
+  margin-bottom: 20px;
+}
+
+.lottery_list {
+  padding: 0;
+  display: flex;
+  gap: 40px;
+  list-style: none;
+  font-size: 20px;
+  margin-bottom: 50px;
+}
+
+.lottery_Btn {
+  align-items: center;
+  appearance: none;
+  background-color: #fcfcfd;
+  border-radius: 4px;
+  border-width: 0;
+  box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px,
+    rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #d6d6e7 0 -3px 0 inset;
+  box-sizing: border-box;
+  color: #36395a;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: "JetBrains Mono", monospace;
+  height: 48px;
+  justify-content: center;
+  line-height: 1;
+  list-style: none;
+  overflow: hidden;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  position: relative;
+  text-align: left;
+  text-decoration: none;
+  transition: box-shadow 0.15s, transform 0.15s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  will-change: box-shadow, transform;
+  font-size: 18px;
+  width: 60%;
+}
+
+.lottery_Btn:focus {
+  box-shadow: #d6d6e7 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px,
+    rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #d6d6e7 0 -3px 0 inset;
+}
+
+.lottery_Btn:hover {
+  box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px,
+    rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #d6d6e7 0 -3px 0 inset;
+  transform: translateY(-2px);
+}
+
+.lottery_Btn:active {
+  box-shadow: #d6d6e7 0 3px 7px inset;
+  transform: translateY(2px);
+}
+
+.lottery_Btn:disabled {
+  opacity: 0.3;
+}
