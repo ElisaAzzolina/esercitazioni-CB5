@@ -1,0 +1,46 @@
+.selector {
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+}
+
+.form_wrapper {
+  width: 300px;
+  border: 3px solid #22d2a0;
+  padding: 30px;
+  box-shadow: 10px -10px 0 -3px #192824, 10px -10px #de6718,
+    20px -20px 0 -3px #192824, 20px -20px #ebea3d, 30px -30px 0 -3px #192824,
+    30px -30px #8773eb, 40px -40px 0 -3px #192824, 40px -40px #e04c44;
+  transition: box-shadow 1s, top 1s, left 1s;
+  position: relative;
+  top: 0;
+  left: 0;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.form_wrapper:hover {
+  top: -10px;
+  left: 10px;
+  box-shadow: 0 0 0 -3px #192824, 0 0 0 0 #de6718, 0 0 0 -3px #192824,
+    0 0 0 0 #ebea3d, 0 0 0 -3px #192824, 0 0 0 0 #8773eb, 0 0 0 -3px #192824,
+    0 0 0 0 #e04c44;
+}
+
+.form_select {
+  color: white;
+  background: none;
+  border: none;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 20px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.select_option {
+  color: #192824;
+}
