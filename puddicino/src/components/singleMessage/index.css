@@ -1,0 +1,67 @@
+.SingleMessage {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  font-family: "Poppins", sans-serif;
+  padding: 10px 15px;
+  box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.11),
+    0 5px 15px 0 rgba(0, 0, 0, 0.08);
+  background-color: #ffffff;
+  border-radius: 0.5rem;
+  border-bottom: 0 solid var(--var-details);
+  transition: border-bottom 300ms ease-in-out, padding-bottom 300ms ease-in-out;
+  cursor: pointer;
+}
+
+.SingleMessage:hover {
+  padding-bottom: 0.5rem;
+  border-bottom: 0.5rem solid var(--var-details);
+}
+
+.userImage {
+  width: 80px;
+  height: 80px;
+  border: 2px solid var(--var-border);
+  border-radius: 20px;
+  margin: 0;
+}
+
+.sigleMessage_titleUser {
+  display: flex;
+  gap: 20px;
+}
+
+.titleUser_inner {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  gap: 6px;
+  margin: 0;
+}
+
+.userName,
+.postTitle {
+  margin: 0;
+}
+
+.postTitle {
+  color: var(--var-title);
+}
+
+.userName {
+  color: var(--var-secondary);
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.postText {
+  font-size: 0.9rem;
+  margin: 0;
+  color: var(--var-text);
+}
+
+.postReactions {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}

@@ -1,0 +1,26 @@
+:root {
+  --var-title: #f29d52;
+  --var-secondary: #bfbcae;
+  --var-border: #f29d52;
+  --var-details: #3b3840;
+  --var-text: rgb(36, 36, 36);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background: rgb(212, 240, 240);
+  background: linear-gradient(
+    183deg,
+    rgba(212, 240, 240, 1) 0%,
+    rgba(151, 193, 169, 1) 100%
+  );
+  font-family: "Poppins", sans-serif;
+}
+
+.title {
+  text-align: center;
+  color: var(--var-title);
+  font-size: 40px;
+}
