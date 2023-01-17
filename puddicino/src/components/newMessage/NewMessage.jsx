@@ -3,25 +3,75 @@ import { POST } from "../../utils/http";
 import "./index.css";
 
 function NewMessage() {
-  const [message, setMessage] = useState("");
+  const [messageText, setMessageText] = useState("");
+  const [authorText, setAuthorText] = useState("");
+  const [titleText, setTitleText] = useState("");
+  const [urlText, setUrlText] = useState("");
+  const [messagePost, setMessagePost] = useState({});
 
-  const onHandleInput = (e) => setMessage(e.target.value);
+  const onHandleMessageText = (e) => setMessageText(e.target.value);
+  const onHandleAuthorText = (e) => setAuthorText(e.target.value);
+  const onHandleTitleText = (e) => setTitleText(e.target.value);
+  const onHandleUrlText = (e) => setUrlText(e.target.value);
 
   const OnSubmit = (e) => {
     e.preventDefault();
-    POST(`posts/add`, message).then(console.log(message));
+    setMessagePost({
+      id: 1,
+      userId: 9,
+      image: urlText,
+      firstName: authorText,
+      title: titleText,
+      body: messageText,
+    });
   };
+
+  useEffect(() => {
+    if (messagePost.firstName && messagePost.title)
+      POST("posts/add", messagePost);
+  }, [messagePost]);
 
   return (
     <div className="NewMessage">
+      <h2>A costa stai pensando?</h2>
       <form className="messageForm" onSubmit={OnSubmit}>
+        <div className="inputSection">
+          <input
+            className="inputImg"
+            value={urlText}
+            onChange={onHandleUrlText}
+            type="text"
+            placeholder="Img url..."
+            required
+          />
+          <div className="inputSubsection">
+            <input
+              className="inputAuthor"
+              value={authorText}
+              onChange={onHandleAuthorText}
+              type="text"
+              placeholder="Author..."
+              required
+            />
+            <input
+              className="inputTitle"
+              value={titleText}
+              onChange={onHandleTitleText}
+              type="text"
+              placeholder="Title..."
+              required
+            />
+          </div>
+        </div>
         <input
-          className="inputText"
+          className="inputMessage"
+          value={messageText}
+          onChange={onHandleMessageText}
           type="text"
-          value={message}
-          onChange={onHandleInput}
-          placeholder="A cosa stai pensando?"
+          placeholder="Message..."
+          required
         />
+
         <input className="inputSubmit" type="submit" value="invia" />
       </form>
     </div>

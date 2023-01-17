@@ -1,0 +1,66 @@
+.SingleFriend {
+  display: flex;
+  gap: 20px;
+  cursor: pointer;
+}
+
+.SingleFriend img {
+  width: 80px;
+  height: 80px;
+  border-radius: 100%;
+  background-color: rgba(0, 0, 0, 0.185);
+  transition: all 0.35s;
+}
+
+.SingleFriend img:hover {
+  box-sizing: border-box;
+  background: none;
+  border: 2px solid #c4b3c9;
+  box-shadow: inset 6px 6px #003f50;
+}
+
+.SingleFriend_text {
+  display: none;
+}
+
+@media (min-width: 800px) {
+  .SingleFriend {
+    transition: all 0.35s;
+  }
+
+  .SingleFriend:hover {
+    width: 80%;
+    padding: 5px 20px;
+    border-left: 5px solid #07f3eb;
+    border-right: 5px solid #07f3eb;
+  }
+
+  .SingleFriend img {
+    width: 100px;
+    height: 100px;
+  }
+
+  .SingleFriend img:hover {
+    width: 100px;
+    height: 100px;
+    background: none;
+    border: 2px solid #c4b3c9;
+    box-shadow: inset 6px 6px #53b0ca;
+  }
+
+  .SingleFriend_text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    font-family: "Roboto Mono", monospace;
+    font-weight: bold;
+    color: white;
+  }
+
+  .SingleFriend_text h3,
+  .SingleFriend_text h4 {
+    margin: 0;
+    padding: 0;
+  }
+}

@@ -10,17 +10,59 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background: rgb(212, 240, 240);
-  background: linear-gradient(
-    183deg,
-    rgba(212, 240, 240, 1) 0%,
-    rgba(151, 193, 169, 1) 100%
-  );
+  background: linear-gradient(180deg, #17a4c7 0%, #760094 100%);
   font-family: "Poppins", sans-serif;
+  background-position: center;
 }
 
-.title {
-  text-align: center;
-  color: var(--var-title);
-  font-size: 40px;
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.friends {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: hidden;
+}
+
+.messages {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+  margin-top: 50px;
+}
+
+.others {
+  display: none;
+}
+
+@media (min-width: 800px) {
+  body {
+    background: linear-gradient(180deg, #00cfc1 0%, #760094 100%);
+    background-size: 100vh;
+  }
+
+  .mainSection {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .friends {
+    width: 20%;
+  }
+
+  .messages {
+    width: 50%;
+    height: 100vh;
+  }
+
+  .others {
+    display: block;
+    width: 20%;
+    height: 100vh;
+  }
 }
