@@ -10,7 +10,7 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background: linear-gradient(180deg, #17a4c7 0%, #760094 100%);
+  background: linear-gradient(180deg, #2c3350 0%, #15172c 100%);
   font-family: "Poppins", sans-serif;
   background-position: center;
 }
@@ -42,7 +42,7 @@ body {
 
 @media (min-width: 800px) {
   body {
-    background: linear-gradient(180deg, #00cfc1 0%, #760094 100%);
+    background: linear-gradient(180deg, #2c3350 0%, #15172c 100%);
     background-size: 100vh;
   }
 

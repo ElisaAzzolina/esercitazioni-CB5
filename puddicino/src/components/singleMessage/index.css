@@ -4,28 +4,21 @@
   gap: 20px;
   padding: 30px 35px;
   margin: 0 10px 0 0;
-  /* box-shadow: 0 6px 6px 0 rgba(0, 0, 0, 0.11), 0 5px 6px 0 rgba(0, 0, 0, 0.08); */
   background: rgba(0, 0, 0, 0.4);
   box-shadow: 5px 10px 18px -4px rgba(0, 0, 0, 0.16);
-  border-radius: 10px;
-  /* border-radius: 0.5rem; */
-  border-bottom: 0 solid #07f3eb;
+  border-bottom: 0 solid #c14af7;
   transition: border-bottom 300ms ease-in-out, padding-bottom 300ms ease-in-out;
   cursor: pointer;
-  font-family: "Roboto Mono", monospace;
 }
 
 .SingleMessage:hover {
   padding-bottom: 0.5rem;
-  border-bottom: 1rem solid #07f3eb;
+  border-bottom: 1rem solid #c14af7;
 }
 
 .userImage {
   width: 100px;
   height: 100px;
-  /* border: 2px solid var(--var-border);
-  border-radius: 20px;
-  margin: 0; */
   border-bottom: 5px solid #07f3eb;
   transition: all 0.35s;
 }
@@ -57,22 +50,32 @@
   margin: 0;
 }
 
-/* .postTitle {
-  color: var(--var-title);
-} */
+.postTitle {
+  font-family: "Roboto Mono", monospace;
+  font-style: normal;
+  font-size: 25px;
+  font-weight: 700;
+  background: linear-gradient(90deg, #4096d3 0%, #c14af7 89.39%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
 
 .userName {
-  color: white;
+  font-family: "Roboto Mono", monospace;
+  font-size: 20px;
+  color: #30b0eb;
   font-weight: bold;
   cursor: pointer;
-  font-size: 15px;
   font-weight: 400;
 }
 
 .postText {
-  font-size: 1rem;
   color: white;
   margin: 0;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 18px;
+  font-weight: 300;
 }
 
 .postReactions {

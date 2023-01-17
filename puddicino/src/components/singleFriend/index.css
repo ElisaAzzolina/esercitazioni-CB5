@@ -2,6 +2,18 @@
   display: flex;
   gap: 20px;
   cursor: pointer;
+  justify-content: center;
+  align-items: center;
+}
+
+.singleFriend_info {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-family: "Ubuntu", sans-serif;
+  color: white;
+  font-weight: 500;
+  margin: 0;
 }
 
 .SingleFriend img {
@@ -31,8 +43,7 @@
   .SingleFriend:hover {
     width: 80%;
     padding: 5px 20px;
-    border-left: 5px solid #07f3eb;
-    border-right: 5px solid #07f3eb;
+    border-left: 5px solid #ee5642;
   }
 
   .SingleFriend img {
@@ -44,7 +55,7 @@
     width: 100px;
     height: 100px;
     background: none;
-    border: 2px solid #c4b3c9;
+    border: 2px solid #f7dfff;
     box-shadow: inset 6px 6px #53b0ca;
   }
 
@@ -55,12 +66,16 @@
     gap: 10px;
     font-family: "Roboto Mono", monospace;
     font-weight: bold;
-    color: white;
+    color: #53b0ca;
   }
 
   .SingleFriend_text h3,
   .SingleFriend_text h4 {
     margin: 0;
     padding: 0;
+  }
+
+  .singleFriend_info {
+    color: white;
   }
 }

@@ -33,7 +33,7 @@ function NewMessage() {
 
   return (
     <div className="NewMessage">
-      <h2>A costa stai pensando?</h2>
+      <h2 className="MsgTitle">A costa stai pensando?</h2>
       <form className="messageForm" onSubmit={OnSubmit}>
         <div className="inputSection">
           <input
@@ -41,7 +41,7 @@ function NewMessage() {
             value={urlText}
             onChange={onHandleUrlText}
             type="text"
-            placeholder="Img url..."
+            placeholder="Img url"
             required
           />
           <div className="inputSubsection">
@@ -50,7 +50,7 @@ function NewMessage() {
               value={authorText}
               onChange={onHandleAuthorText}
               type="text"
-              placeholder="Author..."
+              placeholder="Author"
               required
             />
             <input
@@ -58,7 +58,7 @@ function NewMessage() {
               value={titleText}
               onChange={onHandleTitleText}
               type="text"
-              placeholder="Title..."
+              placeholder="Title"
               required
             />
           </div>
@@ -68,11 +68,11 @@ function NewMessage() {
           value={messageText}
           onChange={onHandleMessageText}
           type="text"
-          placeholder="Message..."
+          placeholder="Message here..."
           required
         />
 
-        <input className="inputSubmit" type="submit" value="invia" />
+        <input className="inputSubmit" type="submit" value="Send" />
       </form>
     </div>
   );
