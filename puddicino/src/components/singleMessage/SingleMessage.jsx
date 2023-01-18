@@ -18,6 +18,7 @@ function SingleMessage({ data }) {
           <h3 className="postTitle">{data.title}</h3>
         </div>
       </div>
+
       <p className="postText">{data.body}</p>
       <ul className="postReactions">
         <li>💕 {data.reactions}</li>

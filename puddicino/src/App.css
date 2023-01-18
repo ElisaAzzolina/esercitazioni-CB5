@@ -11,27 +11,25 @@ body {
   padding: 0;
   box-sizing: border-box;
   background: linear-gradient(180deg, #2c3350 0%, #15172c 100%);
-  font-family: "Poppins", sans-serif;
-  background-position: center;
 }
 
 .App {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
 }
 
 .friends {
   display: flex;
   flex-wrap: nowrap;
   overflow-x: hidden;
+  background: rgba(0, 0, 0, 0.4);
 }
 
 .messages {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   gap: 50px;
   margin-top: 50px;
 }
@@ -43,7 +41,11 @@ body {
 @media (min-width: 800px) {
   body {
     background: linear-gradient(180deg, #2c3350 0%, #15172c 100%);
-    background-size: 100vh;
+  }
+
+  .App {
+    justify-content: space-around;
+    align-items: space-around;
   }
 
   .mainSection {
@@ -61,8 +63,11 @@ body {
   }
 
   .others {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     width: 20%;
     height: 100vh;
+    padding-right: 40px;
   }
 }

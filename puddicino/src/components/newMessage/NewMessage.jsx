@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { POST } from "../../utils/http";
 import "./index.css";
 
-function NewMessage() {
+function NewMessage({ func }) {
   const [messageText, setMessageText] = useState("");
   const [authorText, setAuthorText] = useState("");
   const [titleText, setTitleText] = useState("");
@@ -71,8 +71,12 @@ function NewMessage() {
           placeholder="Message here..."
           required
         />
-
-        <input className="inputSubmit" type="submit" value="Send" />
+        <input
+          className="inputSubmit"
+          type="submit"
+          value="Send"
+          onClick={func}
+        />
       </form>
     </div>
   );

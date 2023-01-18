@@ -1,0 +1,51 @@
+.SingleLikedMessage {
+  display: flex;
+  flex-direction: column;
+  background: rgba(0, 0, 0, 0.3);
+  box-shadow: 5px 10px 18px -4px rgba(0, 0, 0, 0.4);
+  width: 100%;
+  gap: 0;
+  padding: 10px 10px 0 10px;
+}
+
+.likedTitle {
+  margin: 0;
+  font-family: "Roboto Mono", monospace;
+  font-style: normal;
+  font-size: 18px;
+  font-weight: 700;
+  background: linear-gradient(90deg, #4096d3 0%, #c14af7 89.39%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.likedName {
+  font-family: "Roboto Mono", monospace;
+  color: white;
+  font-weight: 500;
+}
+
+.likedReactions {
+  font-family: "Roboto Mono", monospace;
+  font-weight: bold;
+  color: #c14af7;
+}
+
+.sigleLikedMessage_inner {
+  display: flex;
+  gap: 0;
+  justify-content: space-between;
+}
+
+.likedReactions {
+  padding: 0;
+  list-style: none;
+}
+
+.likedImage {
+  width: 100px;
+  height: 100px;
+  margin-top: -5px;
+  align-self: flex-end;
+}

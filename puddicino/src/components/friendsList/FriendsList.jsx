@@ -12,6 +12,7 @@ const FriendsList = () => {
 
   return (
     <div className="FriendsList">
+      <h2 className="friendsTitle">Tutti gli Amici</h2>
       {friendsList.map((friend) => (
         <SingleFriend data={friend} key={friend.id} />
       ))}
