@@ -1,7 +1,5 @@
 .filter {
-  display: flex;
-  justify-content: space-between;
-  gap: 6px;
+  display: none;
 }
 
 .inputText {
@@ -13,17 +11,8 @@
   box-shadow: 5px 10px 18px -4px rgba(0, 0, 0, 0.16);
 }
 
-.inputBtn {
-  background-color: #53b0ca;
-  border: none;
-  font-family: "Roboto Mono", monospace;
-  color: white;
-  font-size: 18px;
-  transition: all 0.35s;
-  box-shadow: 5px 10px 18px -4px rgba(0, 0, 0, 0.16);
-  cursor: pointer;
-}
-
-.inputBtn:hover {
-  background-color: #c14af7;
+@media (min-width: 800px) {
+  .filter {
+    display: block;
+  }
 }

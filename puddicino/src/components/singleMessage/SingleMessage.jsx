@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { GET } from "../../utils/http";
 import "./index.css";
+import like from "./like.gif";
 
 function SingleMessage({ data }) {
   const [user, setUser] = useState({});
@@ -21,7 +22,10 @@ function SingleMessage({ data }) {
 
       <p className="postText">{data.body}</p>
       <ul className="postReactions">
-        <li>💕 {data.reactions}</li>
+        <li>
+          <img src={like} alt="like" />
+          {data.reactions}
+        </li>
       </ul>
     </div>
   );

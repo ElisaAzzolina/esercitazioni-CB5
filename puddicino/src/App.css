@@ -11,8 +11,6 @@ body {
   padding: 0;
   box-sizing: border-box;
   background: linear-gradient(180deg, #2c3350 0%, #15172c 100%);
-  max-height: 100vh;
-  overflow-y: hidden;
 }
 
 .App {
@@ -43,6 +41,8 @@ body {
 @media (min-width: 800px) {
   body {
     background: linear-gradient(180deg, #2c3350 0%, #15172c 100%);
+    max-height: 100vh;
+    overflow-y: hidden;
   }
 
   .App {

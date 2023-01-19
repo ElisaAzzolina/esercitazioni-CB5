@@ -1,30 +1,35 @@
+import { useEffect } from "react";
 import { useState } from "react";
 import "./index.css";
 
-function Filter({ setFilterState }) {
-  const [inputFilter, setInputFilter] = useState("");
+function Filter({ onChange }) {
+  /*  const [inputFilter, setInputFilter] = useState(""); */
 
   const onHandleSearch = (e) => {
     e.preventDefault();
-    setInputFilter(e.target.value);
+    /* setInputFilter(e.target.value); */
+    onChange(e.target.value);
   };
 
-  const onHandleSubmit = (e) => {
+  /*  const onHandleSubmit = (e) => {
     e.preventDefault();
     setFilterState(inputFilter);
-  };
+  }; */
+
+  /*   useEffect(() => {
+    console.log(inputFilter);
+  }, [inputFilter]); */
 
   return (
     <div>
-      <form className="filter" onSubmit={onHandleSubmit}>
+      <form className="filter" onSubmit={(e) => e.preventDefault()}>
         <input
           className="inputText"
           type="text"
-          value={inputFilter}
+          /* value={inputFilter} */
           onChange={onHandleSearch}
-          placeholder="Type Here..."
+          placeholder="Search Users..."
         />
-        <input type="submit" value="Search" className="inputBtn" />
       </form>
     </div>
   );

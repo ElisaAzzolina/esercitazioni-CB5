@@ -10,6 +10,7 @@
   width: 100vw;
   background-color: rgba(0, 0, 0, 0.75);
   z-index: -100;
+  animation: fadeIn 1s;
 }
 .content {
   margin-top: 40px;
@@ -18,6 +19,16 @@
   border-radius: 6px;
   background-color: white;
   width: 600px;
+  animation: fadeIn 1.5s;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 @media (min-width: 800px) {

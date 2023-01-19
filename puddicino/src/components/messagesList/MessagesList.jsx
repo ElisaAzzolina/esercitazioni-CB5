@@ -3,14 +3,12 @@ import { GET } from "../../utils/http";
 import SingleLikedMessage from "../singleMessage/SingleMessage";
 import "./index.css";
 
-function MessagesList({ searchFilter }) {
+function MessagesList() {
   const [messagesList, setMessagesList] = useState([]);
 
   useEffect(() => {
-    GET("posts").then(({ posts }) =>
-      setMessagesList(posts.filter((post) => post.title.includes(searchFilter)))
-    );
-  }, [searchFilter]);
+    GET("posts").then(({ posts }) => setMessagesList(posts));
+  }, []);
 
   return (
     <div className="MessagesList">

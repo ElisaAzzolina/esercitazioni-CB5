@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { GET } from "../../utils/http";
 import "./index.css";
+import like from "../singleMessage/like.gif";
 
 function SingleLikedMessage({ data }) {
   const [user, setUser] = useState({});
@@ -16,7 +17,10 @@ function SingleLikedMessage({ data }) {
         <div className="inner_text">
           <p className="likedName">@{user.firstName}</p>
           <ul className="likedReactions">
-            <li>💕 {data.reactions}</li>
+            <li>
+              <img src={like} alt="like" />
+              {data.reactions}
+            </li>
           </ul>
         </div>
         <img className="likedImage" src={user.image} alt={user.firstName} />
