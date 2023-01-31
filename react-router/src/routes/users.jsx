@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { Outlet } from "react-router-dom";
 import SingleUserCard from "./../components/singleUserCard/singleUserCard";
 import styles from "./styles/users.module.scss";
 
@@ -12,11 +13,14 @@ function Users() {
   }, []);
 
   return (
-    <div className={styles.main}>
-      {users.map((single) => (
-        <SingleUserCard data={single} key={single?.id} />
-      ))}
-    </div>
+    <>
+      <div className={styles.main}>
+        {users.map((single) => (
+          <SingleUserCard data={single} key={single?.id} />
+        ))}
+      </div>
+      <Outlet />
+    </>
   );
 }
 

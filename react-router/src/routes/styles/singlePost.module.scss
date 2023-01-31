@@ -1,0 +1,77 @@
+.main {
+  box-sizing: border-box;
+  background-color: #23a6d5;
+  height: 100%;
+  padding: 50px 5%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  font-family: "Poppins", sans-serif;
+}
+
+.postInner {
+  width: 500px;
+}
+
+.post {
+  box-sizing: border-box;
+  background-color: white;
+
+  h3 {
+    padding: 20px;
+    font-size: 1.8rem;
+    margin: 0;
+  }
+  p {
+    padding: 20px;
+  }
+}
+
+.reactions {
+  background-color: #1f354c;
+  padding: 16px;
+  color: white;
+}
+
+.reactionsTitle {
+  color: #ff7799;
+  font-weight: bold;
+}
+
+.btns {
+  background-color: #1f354c;
+  padding: 10px;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+@media screen and (min-width: 767px) {
+  .main {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    height: 100vh;
+    overflow: hidden;
+    padding: 0;
+  }
+
+  .post,
+  .postInner,
+  .reactions {
+    box-sizing: border-box;
+    height: 400px;
+  }
+  .postInner {
+    width: 500px;
+  }
+  .post {
+    width: 500px;
+  }
+
+  .reactions {
+    align-self: flex-end;
+    overflow: hidden;
+  }
+}

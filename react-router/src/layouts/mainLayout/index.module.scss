@@ -1,0 +1,25 @@
+.MainLayout {
+  padding: 10px 0;
+}
+
+.MainLayout h1 {
+  color: black;
+}
+
+.menuList {
+  list-style: none;
+  display: flex;
+  gap: 50px;
+  li a {
+    text-decoration: none;
+    color: #ff7799;
+    font-weight: 500;
+    transition: all 0.35s;
+    &:hover {
+      font-weight: bold;
+    }
+    &:active {
+      color: #1f354c;
+    }
+  }
+}
