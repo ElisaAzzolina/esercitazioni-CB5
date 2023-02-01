@@ -1,0 +1,55 @@
+.main {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  height: 85vh;
+  overflow-y: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: linear-gradient(-45deg, #f35a34, #f4d536, #44a952, #44a952);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+  font-family: "Poppins", sans-serif;
+  h1 {
+    margin: 0;
+    color: white;
+  }
+  .btn {
+    background-color: white;
+    width: fit-content;
+    border: none;
+    padding: 10px 20px;
+    font-family: "Poppins", sans-serif;
+    font-weight: bold;
+    color: #f35a34;
+    font-size: 1.2rem;
+    border-radius: 6px;
+    box-shadow: #f35a34 2.4px 2.4px 1px;
+    transition: all 0.35s;
+    cursor: pointer;
+    &:hover {
+      box-shadow: #f35a34 3.4px 3.4px 1px;
+    }
+  }
+
+  .link {
+    color: #f35a34;
+    text-decoration: none;
+  }
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
