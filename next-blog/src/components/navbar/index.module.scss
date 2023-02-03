@@ -1,0 +1,63 @@
+.Navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+  padding: 10px 5%;
+
+  &__logo {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    color: rgb(99, 99, 99);
+    font-weight: bold;
+    font-size: 1.2rem;
+    padding: 4px 6px;
+    border: 2px solid rgb(99, 99, 99);
+    &:hover {
+      color: rgb(10, 56, 45);
+    }
+  }
+}
+
+.logo__link {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: rgb(99, 99, 99);
+  font-weight: bold;
+  font-size: 1.2rem;
+  text-decoration: none;
+}
+
+.list {
+  display: flex;
+  gap: 10px;
+  font-family: "Poppins", sans-serif;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  &__link {
+    text-decoration: none;
+    color: rgb(99, 99, 99);
+    transition: all 0.35s;
+  }
+  &__link:hover {
+    color: rgb(10, 56, 45);
+    font-weight: bold;
+  }
+}
+
+.socialList {
+  display: flex;
+  gap: 5px;
+  font-family: "Poppins", sans-serif;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  &__item {
+    color: rgb(99, 99, 99);
+    transition: all 0.35s;
+  }
+  &__item:hover {
+    color: rgb(10, 56, 45);
+    font-weight: bold;
+  }
+}
