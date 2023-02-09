@@ -1,0 +1,20 @@
+.navbar {
+  padding: 20px 5%;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  text-align: right;
+  margin-bottom: 50px;
+
+  h2 {
+    cursor: pointer;
+  }
+
+  button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s;
+    &:hover {
+      font-weight: bold;
+    }
+  }
+}
